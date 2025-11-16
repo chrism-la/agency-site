@@ -62,7 +62,7 @@ function App() {
                     className="relative text-center overflow-hidden h-[80vh] flex flex-col justify-center items-center"
                 >
                     <video className="absolute top-0 left-0 w-screen h-full object-cover -z-20" autoPlay loop muted playsInline>
-                        <source src="/Videos/BoxerVisionCraft6Video.mp4" type="video/mp4" />
+                        <source src="Videos/BoxerVisionCraft6Video.mp4" type="video/mp4" />
                         Your browser does not support the video tag.
                     </video>
                     <div className="absolute top-0 left-0 w-full h-full bg-black/50 -z-10"></div>
@@ -104,12 +104,12 @@ function App() {
                     {/* Top row: Image + Video with slower slide-in */}
                     <motion.div className="w-full h-[60vh] flex">
                         <motion.div initial={{ opacity: 0, x: -100 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 1.2 }} className="relative w-1/2 h-full overflow-hidden ">
-                            <img src="/Photos/Portfolio1.jpg" alt="Portfolio 1" className="w-full h-full object-cover " />
+                            <img src="Photos/Portfolio1.jpg" alt="Portfolio 1" className="w-full h-full object-cover " />
                             <span className="absolute bottom-4 left-4 text-white font-bold text-xl bg-black/40 px-3 py-1 rounded">Photography</span>
                         </motion.div>
                         <motion.div initial={{ opacity: 0, x: 100 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 1.2 }} className="relative w-1/2 h-full overflow-hidden ">
                             <video className="w-full h-full object-cover " autoPlay loop muted playsInline>
-                                <source src="/Videos/portfolioVideo.mp4" type="video/mp4" />
+                                <source src="Videos/portfolioVideo.mp4" type="video/mp4" />
                                 Your browser does not support the video tag.
                             </video>
                             <span className="absolute bottom-4 left-4 text-white font-bold text-xl bg-black/40 px-3 py-1 rounded">Videography</span>
@@ -119,9 +119,9 @@ function App() {
                     {/* Bottom row: Three images with staggered fade-up */}
                     <div className="flex flex-col md:flex-row gap-6 px-6 md:px-20 lg:px-32 mt-10">
                         {[
-                            { src: '/Photos/Portfolio2.jpg', label: 'Brand Campaigns' },
-                            { src: '/Photos/Portfolio3.jpg', label: 'Events' },
-                            { src: '/Photos/Portfolio4.jpg', label: 'Products' },
+                            { src: 'Photos/Portfolio2.jpg', label: 'Brand Campaigns' },
+                            { src: 'Photos/Portfolio3.jpg', label: 'Events' },
+                            { src: 'Photos/Portfolio4.jpg', label: 'Products' },
                         ].map((item, i) => (
                             <motion.div
                                 key={i}
@@ -141,7 +141,7 @@ function App() {
                 {/* ABOUT */}
                 <motion.section initial="hidden" whileInView="visible" className="py-16 flex flex-col md:flex-row items-center gap-10 md:gap-16 px-6 md:px-20 lg:px-32">
                     <motion.div initial={{ opacity: 0, x: -50, scale: 0.95 }} whileInView={{ opacity: 1, x: 0, scale: 1 }} transition={{ duration: 0.6 }} className="md:w-1/2">
-                        <img src="/Photos/about.jpg" alt="About Us" className="w-full h-64 md:h-72 rounded-xl shadow-lg object-cover" />
+                        <img src="Photos/about.jpg" alt="About Us" className="w-full h-64 md:h-72 rounded-xl shadow-lg object-cover" />
                     </motion.div>
 
                     <motion.div initial={{ opacity: 0, x: 50, scale: 0.95 }} whileInView={{ opacity: 1, x: 0, scale: 1 }} transition={{ duration: 0.6 }} className="md:w-1/2 text-center md:text-left">
