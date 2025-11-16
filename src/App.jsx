@@ -67,11 +67,11 @@ function App() {
                     </video>
                     <div className="absolute top-0 left-0 w-full h-full bg-black/50 -z-10"></div>
 
-                    <h1 className="text-4xl md:text-6xl font-bold leading-tight mb-4 text-white relative z-10">
+                    <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold leading-tight mb-4 text-white relative z-10">
                         <span className="text-blue-600">Creative</span> Agency for Brands &<br /> Athletes
                     </h1>
                     <p className="text-neutral-200 max-w-xl mx-auto mb-8 relative z-10">We create high-impact visuals, commercials, photo campaigns & event coverage for modern brands.</p>
-                    <button className="px-6 py-3 bg-blue-600 rounded-full text-sm font-medium hover:bg-blue-500 transition relative z-10">View Work</button>
+                    <button className="px-4 py-2 sm:px-6 sm:py-3 bg-blue-600 rounded-full text-sm font-medium hover:bg-blue-500 transition relative z-10">View Work</button>
                 </motion.section>
 
                 {/* SERVICES */}
@@ -79,7 +79,7 @@ function App() {
                     <motion.h2 initial="hidden" whileInView="visible" variants={fadeUp} className="text-3xl font-bold mb-10 text-center">
                         Services
                     </motion.h2>
-                    <div className="grid md:grid-cols-3 gap-8">
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
                         {[
                             { title: 'Photography', desc: 'High-quality lifestyle, product & event shots.' },
                             { title: 'Videography', desc: 'Cinematic commercials & social video content.' },
@@ -102,7 +102,7 @@ function App() {
                 {/* PORTFOLIO */}
                 <section className="w-full relative flex flex-col gap-6">
                     {/* Top row: Image + Video with slower slide-in */}
-                    <motion.div className="w-full h-[60vh] flex">
+                    <motion.div className="w-full h-[60vh] flex flex-col md:flex-row gap-6">
                         <motion.div initial={{ opacity: 0, x: -100 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 1.2 }} className="relative w-1/2 h-full overflow-hidden ">
                             <img src="Photos/Portfolio1.jpg" alt="Portfolio 1" className="w-full h-full object-cover " />
                             <span className="absolute bottom-4 left-4 text-white font-bold text-xl bg-black/40 px-3 py-1 rounded">Photography</span>
@@ -129,7 +129,7 @@ function App() {
                                 whileInView="visible"
                                 variants={portfolioFadeUp}
                                 transition={{ delay: i * 0.15, duration: 0.6 }}
-                                className="relative w-full md:w-1/3 h-64 md:h-80 overflow-hidden hover:scale-105 transition duration-500 rounded-xl"
+                                className="relative w-full md:w-1/3 h-48 md:h-80 overflow-hidden hover:scale-105 transition duration-500 rounded-xl"
                             >
                                 <img src={item.src} alt={item.label} className="w-full h-full object-cover rounded-xl" />
                                 <span className="absolute bottom-4 left-4 text-white font-bold text-lg">{item.label}</span>
@@ -141,7 +141,7 @@ function App() {
                 {/* ABOUT */}
                 <motion.section initial="hidden" whileInView="visible" className="py-16 flex flex-col md:flex-row items-center gap-10 md:gap-16 px-6 md:px-20 lg:px-32">
                     <motion.div initial={{ opacity: 0, x: -50, scale: 0.95 }} whileInView={{ opacity: 1, x: 0, scale: 1 }} transition={{ duration: 0.6 }} className="md:w-1/2">
-                        <img src="Photos/about.jpg" alt="About Us" className="w-full h-64 md:h-72 rounded-xl shadow-lg object-cover" />
+                        <img src="Photos/about.jpg" alt="About Us" className="w-full h-48 md:h-80 rounded-xl shadow-lg object-cover" />
                     </motion.div>
 
                     <motion.div initial={{ opacity: 0, x: 50, scale: 0.95 }} whileInView={{ opacity: 1, x: 0, scale: 1 }} transition={{ duration: 0.6 }} className="md:w-1/2 text-center md:text-left">
@@ -154,7 +154,7 @@ function App() {
                 </motion.section>
 
                 {/* CONTACT / LET'S WORK */}
-                <section className="py-20 relative z-10 px-6 md:px-20 lg:px-32">
+                <section className="py-20 px-6 sm:px-10 md:px-20 lg:px-32 relative z-10">
                     <motion.div
                         initial={{ opacity: 0, y: 30 }}
                         whileInView={{ opacity: 1, y: 0 }}
